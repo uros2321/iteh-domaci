@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Products from './components/Products';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {useState} from 'react'
+import Kontakt from "./components/Kontakt";
 
 function App() {
 
@@ -99,6 +100,10 @@ function App() {
           }/>
           <Route path='/favorites' element={
             <FavoritesBody products={favProd} removeFavorite={removeFavorite}/>
+          }/>
+
+          <Route path='/kontakt' element={
+            <Kontakt />
           }/>
         </Routes>
       <Footer></Footer>

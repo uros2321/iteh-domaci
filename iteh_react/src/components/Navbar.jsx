@@ -8,6 +8,7 @@ function Navbar({numFavorite}){
           <Link to="/"> Početna</Link>
           <Link to="/products"> Proizvodi</Link>
           <Link to="/favorites" className='fav'> Izabrani <div className='numFav'>{numFavorite}</div></Link>
+            <Link to="/kontakt"> Kontakt</Link>
         </nav>
       </div>
 
