@@ -24,7 +24,8 @@ class MovieResource extends JsonResource
             'opis' => $this->resource->opis,
             'user_id' => new UserResource($this->resource->user),
             'zanr_id'=> new GenreResource($this->resource->zanr),
-            'reditelj_id' => new DirectorResource($this->resource->director)
+            'reditelj_id' => new DirectorResource($this->resource->director),
+            'datum_upisa' => $this->resource->datum_upisa,
         ];
     }
 }
