@@ -137,4 +137,9 @@ class MovieController extends Controller
         $movie->delete();
         return response()->json(['Film uspesno izbrisan', new MovieResource($movie)]);
     }
+    public function paginate()
+    {
+        $movies = Movie::paginate(3);
+        return new MovieCollection($movies);
+    }
 }

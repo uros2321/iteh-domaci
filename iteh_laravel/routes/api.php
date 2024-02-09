@@ -40,6 +40,7 @@ Route::resource('directors/{id}/movies',MovieDirectorController::class);
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
+Route::get('/movies.paginate', [MovieController::class, 'paginate']);
 
 Route::group(['middleware'=>['auth:sanctum']], function(){
     Route::get('/profile', function(Request $request){
